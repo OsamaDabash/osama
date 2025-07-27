@@ -1,0 +1,73 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2em; /* 75% أكبر من النص */
+  margin-bottom: 30px;
+}
+
+.container {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* الصناديق */
+.menu-box {
+  background-color: #d4d4ca; /* أزرق */
+  border: 2px solid gold;    /* إطار ذهبي */
+  padding: 20px;
+  margin: 10px;
+  color: rgb(7, 6, 6);
+  position: relative;
+}
+
+.menu-box .title {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: black;
+  color: white;
+  border: 1px solid black;
+  padding: 5px 10px;
+  font-size: 1.25em; /* 25% أكبر من النص */
+}
+
+/* Desktop View */
+@media (min-width: 992px) {
+  .menu-box {
+    float: left;
+    width: 32%;
+    margin: 1%;
+    height: 250px;
+  }
+}
+
+/* Tablet View */
+@media (min-width: 768px) and (max-width: 991px) {
+  .menu-box {
+    float: left;
+    width: 48%;
+    margin: 1%;
+    height: 250px;
+  }
+  #sushi {
+    width: 98%;
+  }
+}
+
+/* Mobile View */
+@media (max-width: 767px) {
+  .menu-box {
+    width: 100%;
+    margin-bottom: 15px;
+    height: auto;
+  }
+}
